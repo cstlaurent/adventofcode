@@ -1,0 +1,22 @@
+{
+  "name": "adventofcode",
+  "version": "0.2.0",
+  "description": "Code used to solve Advent of Code 2015 found at: http://adventofcode.com/ ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cstlaurent/adventofcode.git"
+  },
+  "author": "Carl St-Laurent",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cstlaurent/adventofcode/issues"
+  },
+  "homepage": "https://github.com/cstlaurent/adventofcode#readme",
+  "devDependencies": {
+    "standard": "^5.4.1"
+  }
+}
