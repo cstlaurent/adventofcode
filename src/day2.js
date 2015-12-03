@@ -3,21 +3,27 @@
 let lineReader = require('line-reader')
 
 let totalPaper = 0
+let totalRibbon = 0
 
 lineReader.eachLine('data/day2.txt', function (line, last) {
-  let split = line.split('x')
-  totalPaper += calculateNeededPaper(split[0], split[1], split[2])
+  let measurements = line.split('x')
+  calculateNeededPaper(measurements)
   if (last) {
     console.log('The elves need ' + totalPaper + ' square feet of paper.')
+    console.log('The elves need ' + totalRibbon + ' feet of ribbon.')
   }
 })
 
-function calculateNeededPaper (length, width, height) {
-  let side1 = length * width
-  let side2 = length * height
-  let side3 = width * height
+function calculateNeededPaper (measurements) {
+  measurements.sort((a, b) => {
+    return a - b
+  })
 
-  var extra = Math.min(side1, side2, side3)
+  let side1 = measurements[0] * measurements[1]
+  let side2 = measurements[0] * measurements[2]
+  let side3 = measurements[1] * measurements[2]
 
-  return 2 * side1 + 2 * side2 + 2 * side3 + extra
+  totalPaper += (3 * side1 + 2 * side2 + 2 * side3)
+
+  totalRibbon += (2 * measurements[0] + 2 * measurements[1] + measurements[0] * measurements[1] * measurements[2])
 }
