@@ -1,6 +1,9 @@
 'use strict'
-
 let lineReader = require('line-reader')
+
+module.exports = {
+  calculateNeededPaper: calculateNeededPaper
+}
 
 let totalPaper = 0
 let totalRibbon = 0
