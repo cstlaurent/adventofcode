@@ -23,6 +23,7 @@
     "standard": "^5.4.1"
   },
   "dependencies": {
-    "line-reader": "^0.3.0"
+    "line-reader": "^0.3.0",
+    "md5": "^2.0.0"
   }
 }
