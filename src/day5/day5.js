@@ -1,6 +1,5 @@
 'use strict'
 
-'use strict'
 let lineReader = require('line-reader')
 
 module.exports = {
