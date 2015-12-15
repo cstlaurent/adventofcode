@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "line-reader": "^0.3.0",
+    "lodash": "^3.10.1",
     "md5": "^2.0.0"
   }
 }
